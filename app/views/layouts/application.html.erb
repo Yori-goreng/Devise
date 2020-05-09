@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <head>
     <title>Devise</title>
     <%= csrf_meta_tags %>
@@ -10,6 +12,17 @@
   </head>
 
   <body>
-    <%= yield %>
+  <%= render 'partial/header' if current_user %>
+    <% if flash[:notice] %>
+      <div class="alert alert-info">
+        <%= flash[:notice] %>
+    </div>
+  <% end %>
+    <% if flash[:alert] %>
+      <div class="alert alert-danger">
+        <%= flash[:alert] %>
+    </div>
+  <% end %>
+  <%= yield %>
   </body>
 </html>
