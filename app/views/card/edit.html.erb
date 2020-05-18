@@ -1,4 +1,3 @@
-ML
 <div class="cardeditPgae">
   <div class='container'>
     <%= form_with model: @card, url: { action: :update }, html: { class: 'cardeditForm' }, local: true do |f| %>
@@ -13,12 +12,6 @@ ML
         <%= f.label :memo %>
         <%= f.text_area :memo, class: "form-control", placeholder: "詳細" %>
       </div>
-
-      <div class="cardeditForm_memo">
-        <label>リスト名</label>
-        <%= select :card, :list_id, @lists.map{ |l| [l.title, l.id] }, {}, { class: 'form-control' } %>
-      </div>
-
       <div class="text-center"><%= f.submit "更新する", class: "submitBtn" %></div>
     <% end %>
   </div>
