@@ -8,6 +8,7 @@ class CardController < ApplicationController
 
     def create
       @card = Card.new(card_params)
+      @list = List.find_by(id: params[:list_id])
       if @card.save
         redirect_to :root
       else
