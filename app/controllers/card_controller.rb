@@ -38,6 +38,15 @@ class CardController < ApplicationController
 
     private
 
+<<<<<<< HEAD
+      def card_params
+        params.require(:card).permit(:title, :memo, :list_id)
+      end
+      
+      def set_card
+        @card = Card.find_by(id: params[:id])
+      end
+=======
     def card_params
       params.require(:card).permit(:title, :memo, :list_id)
     end
@@ -45,4 +54,5 @@ class CardController < ApplicationController
     def set_card
       @card = Card.find_by(id: params[:id])
     end
+>>>>>>> 3e8a54b66af67b8936e1cb583a411e50a715ef8c
   end
