@@ -52,19 +52,21 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up.
 
-  def update
-    @user = User.find_by(id: params[:id])
-    if @user.update_attributes(user_params)
-      redirect_to :root
-  else
-      render action: edit
-  end
-end
+    def edit
+    end
 
-private
-def user_params
-  params.require(:user).permit(:name).merge(user: current_user)
-end
+    def update
+      if current_user.update!(user_params)
+        redirect_to :root
+      else
+        render :edit
+      end
+    end
+
+    private
+    def user_params
+      params.require(:user).permit(:name)
+    end
 end
 
   # The path used after sign up for inactive accounts.

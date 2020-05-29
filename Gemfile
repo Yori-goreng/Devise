@@ -69,4 +69,7 @@ gem 'pg', group: :production
 gem 'pry-rails'
 
 gem 'rails-i18n'
+gem "activesupport", ">= 5.2.4.3"
+gem "actionpack", ">= 5.2.4.3"
+gem "activestorage", ">= 5.2.4.3"
 gem 'devise'
