@@ -2,7 +2,7 @@ class CardController < ApplicationController
     before_action :set_card, only: %i(show edit update destroy)
   
     def new
-      @card = Card.new
+      @card = Card.new      
       @list = List.find_by(id: params[:list_id])
     end
 
@@ -35,9 +35,10 @@ class CardController < ApplicationController
       @card.destroy
       redirect_to :root
     end
-  
+
     private
 
+<<<<<<< HEAD
       def card_params
         params.require(:card).permit(:title, :memo, :list_id)
       end
@@ -45,4 +46,13 @@ class CardController < ApplicationController
       def set_card
         @card = Card.find_by(id: params[:id])
       end
+=======
+    def card_params
+      params.require(:card).permit(:title, :memo, :list_id)
+    end
+     
+    def set_card
+      @card = Card.find_by(id: params[:id])
+    end
+>>>>>>> 3e8a54b66af67b8936e1cb583a411e50a715ef8c
   end
