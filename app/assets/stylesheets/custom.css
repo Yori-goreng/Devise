@@ -1,0 +1,123 @@
+body {
+  overflow: visible;
+}
+
+.notice,
+.alert {
+  display: none;
+}
+
+.header {
+  background: #026aa7;
+  padding: 10px;
+}
+
+.header .nav .header_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .nav .header_menu li {
+  list-style: none;
+  color: #fff;
+}
+
+.header .nav .header_menu li a {
+  color: #fff;
+}
+
+.header .nav .header_menu_title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header .nav .header_menu_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .nav .header_menu_inner .listNew:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f044";
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.submitBtn {
+  background: #29b744;
+  color: #fff;
+  width: 200px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 90px;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  opacity: .6;
+}
+
+.sinupPage {
+  margin-top: 10vh;
+}
+
+.sinupPage .titleArea {
+  text-align: center;
+}
+
+.sinupPage .titleArea h1 {
+  font-size: 2rem;
+}
+
+.sinupPage .signupForm .form-group {
+  margin: 0 auto 1.5rem auto;
+  max-width: 500px;
+}
+
+.sinupPage .signupForm .form-group .form-control {
+  background: #f6f8fa;
+}
+
+.sinupPage .submitBtn {
+  background: #29b744;
+  color: #fff;
+  width: 200px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 90px;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.sinupPage .submitBtn:hover {
+  opacity: .6;
+}
+
+.acountPage_link > a {
+  color: #0075c1;
+}
+/*# sourceMappingURL=custom.css.map */
