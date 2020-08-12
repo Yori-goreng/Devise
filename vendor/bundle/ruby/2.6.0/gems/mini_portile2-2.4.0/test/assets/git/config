@@ -1,3 +1,7 @@
+[remote "origin"]
+    url = https://github.com/Yori-goreng/TaskManager.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+
 [core]
   whitespace=tab-in-indent,-indent-with-non-tab
 [apply]
